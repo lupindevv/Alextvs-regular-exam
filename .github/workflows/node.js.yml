@@ -29,3 +29,11 @@ jobs:
       run: npm run test:ui
     - name: Display my username in SoftUni
       run: echo 'Alextvs'
+  deploy_render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto deploy to render
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with: 
+          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.MY_RENDER_API_KEY }}
