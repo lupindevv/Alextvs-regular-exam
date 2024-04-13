@@ -24,7 +24,7 @@ jobs:
     - name: Install browsers
       run: npx playwright install
     - name: Start the app
-      run: npm start
+      run: npm start &
     - name: Run UI test
       run: npm run test:ui
     - name: Display my username in SoftUni
